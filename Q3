@@ -1,0 +1,11 @@
+#assignment Q3 Program that accepts a sentence and calculate the no:of letters and digits.
+
+string=input("Enter a string:")
+digit_count,letter_count=0,0
+for letter in string:
+    if '0'<=letter<='9':
+        digit_count+=1
+    elif 'a'<=letter<='z'or 'A'<=letter<='Z':
+        letter_count+=1
+print("LETTERS:",letter_count)
+print("DIGITS:",digit_count)
