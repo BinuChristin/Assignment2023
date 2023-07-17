@@ -1,0 +1,21 @@
+#assignment Q4 Write a program to check the validity of a password under certain conditions.
+
+import re    #importing regular expressions
+passwd=input("Enter the password:")
+valid=0       #initializing validity
+if not re.search("[a-z]",passwd):
+    valid=1
+if not re.search("[A-Z]",passwd):
+    valid=1
+if not re.search("[0-9]",passwd):
+    valid=1
+if not re.search("[$@#]",passwd):
+    valid=1
+if len(passwd)<6:
+    valid=1
+if len(passwd)>12:
+    valid=1
+if (valid==0):
+    print("Password is valid.")
+else:
+    print("Password is invalid.")
