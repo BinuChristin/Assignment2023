@@ -1,0 +1,9 @@
+#assignment Q2 write a program that reads in a string on the command line and returns a table of the frequency of occurence.Ignore the case.
+import collections
+
+text=input("Enter the text:")
+text=text.lower()
+freqofstring=collections.Counter(text.split(" "))
+
+for word,count in freqofstring.items():
+    print(f"{word}:{count}")
