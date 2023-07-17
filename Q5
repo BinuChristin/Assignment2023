@@ -1,0 +1,15 @@
+#assignment Q5.Write a python that takes a string of words seperated by spaces,together with a 'target'word and shows the position of the target word in the string of words
+input_string=input("Enter the string:")
+target_word=input("Enter the target:")
+
+text=input_string.split()
+positions=[]
+
+for i in range(len(text)):
+    if text[i]==target_word:
+        positions.append(i+1) #inserting the value into the existing list
+
+if positions:
+    print(positions)
+else:
+    print("False")
