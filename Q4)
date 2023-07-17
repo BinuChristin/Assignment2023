@@ -1,0 +1,28 @@
+#Q4) Write a Python program to check the validity of a password input by the user.
+    # The password should satisfy the following conditions:
+    #a.	It should have at least 1 letter [a to z]
+    #b.	It should have at least 1 number [0 to 9]
+    #c.	It should have at least 1 capital letter [A to Z]
+    #d.	It should have at least one special character [$, #, @]
+    #e.	Minimum length = 6 characters
+    #f.	Maximum length = 12 characters
+
+
+import re
+flag = 0
+password = input("enter your password: ")
+if not len(password)<6 and len(password)>12:
+   flag=1
+if not re.search('[a-z]',password):
+   flag=1
+if not re.search('[a-z]',password):
+   flag=1
+if not re.search('[0-9]',password):
+   flag=1
+if not re.search('[!@#$&*?]',password):
+   flag=1
+
+if(flag==0):
+   print("valid password")
+else:
+   print("invalid password")
