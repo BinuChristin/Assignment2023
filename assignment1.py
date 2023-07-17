@@ -27,20 +27,6 @@ else:
 
 # 2
 """
-import re
-a = input("enter a string")
-b = re.split(" ", a)
-
-dicti = {}
-for i in b:
-    if i in dicti:
-        dicti[i] = dicti[i] + 1
-    else:
-        dicti[i] = 1
-for key in dicti:
-    print(key, '-', dicti[key])
-    
-    # or
     
 sentence = input("enter a string")
 x = sentence.split(" ")
@@ -127,16 +113,7 @@ else:
 """
 
 
-"""
-#2 sir answer
-sentence = input("enter a string")
-x = sentence.split(" ")
-y = []
-for i in x:
-    if y.count(i) == 0:
-       y.append(i)
-       print(i.title(), "-", sentence.count(i))
-"""
+
 
 
 
