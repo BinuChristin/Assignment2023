@@ -1,0 +1,11 @@
+#Q2)Write a program that reads in a string on the command line
+    # and returns a table of the frequency of occurrence of each word.
+    # Ignore the case
+
+import collections
+string = input("Enter a string: ")
+string = string.lower()
+freqofstr =collections.Counter(string.split(" "))
+
+for i,count in freqofstr.items():
+    print(f"{i}: {count}")
