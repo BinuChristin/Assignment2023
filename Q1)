@@ -1,0 +1,31 @@
+#Q1) Write a procedure that solves quadratic equations using the quadratic formula:
+    # It should take as arguments three numbers a, b, and c.
+    # It should print error messages if a is zero, or if the roots are complex.
+    # Otherwise it should print the two roots.
+
+import cmath
+
+print("General Expression: ax**2 + bx + c + 0")      #general expression
+a = int(input("Enter a = "))
+b = int(input("Enter b = "))
+c = int(input("Enter c = "))
+
+if(a==0):
+   print("Error: a can't be zero")
+else:                                                  # equation: x = -b+-sqrt(b^2 - 4ac)/2a
+   d = (b**2) - (4*a*c)                               # d = b^2 - 4ac
+
+Solution1 = (-b-cmath.sqrt(d))/(2*a)                #Solution1 = -b+sqrt(b^2 - 4ac)/2a
+Solution2 = (-b+cmath.sqrt(d))/(2*a)                #Solution2 = -b-sqrt(b^2 - 4ac)/2a
+print("solution1:",Solution1)
+print("solution2:",Solution2)
+
+if d>0:                                             #d>0, then distinct real roots
+   print("Roots are: Two distinct real roots")
+   print(f"Solutions: {Solution1} and {Solution2}")
+elif d == 0:                                         #d=0, then two real equal roots
+   print("Roots are: Two equal real roots")
+   print(f"Solutions: {Solution1} and {Solution2}")
+elif d<0:                                            #d<0, then two complex roots
+   print("Roots are: Two complex roots")
+   print("Solutions: Error")
