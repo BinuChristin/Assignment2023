@@ -1,0 +1,10 @@
+#Q5) Write a Python program that takes a string of words separated by spaces,
+    # together with a ”target” word,
+    # and shows the position of the target word in the string of words
+
+import re
+string = input("Enter a string: ")
+string = string.split()
+target_word = input("Enter a target word: ")
+posoftarget_word = [i for i in range(len(string)) if string[i] == target_word]
+print(posoftarget_word)
