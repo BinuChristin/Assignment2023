@@ -1,0 +1,12 @@
+#Q3)Write a program that accepts a sentence and calculate the number of letters and digits.
+
+sentance = input("Enter a sentence: ")
+count1 = 0
+count2 = 0
+for i in sentance:
+    if(i.isalpha()):
+        count1+=1
+    elif(i.isdigit()):
+        count2+=1
+print("LETTERS: ", count1)
+print("Digits: ", count2)
